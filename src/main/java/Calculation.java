@@ -1,5 +1,7 @@
 import java.util.Scanner;
-
+/*
+Rate calculation
+ */
 public class Calculation {
     private static double rate;
     private static int answerActivity;

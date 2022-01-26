@@ -30,7 +30,7 @@ public class Processing {
     public static void process(){
         //-------------choose a grade
 
-        System.out.println("Choose a grade:");
+        System.out.println("Choose a grade: 1-9d, 2-9e, 3-9f, 4-9g, 5-11a, 6-11b, 7-11c, 8-11d, 9-12");
 
         scanner = new Scanner(System.in);
         switch(scanner.nextInt()){
@@ -45,7 +45,7 @@ public class Processing {
                 break;
             }
             default:
-                System.out.println("No file");
+                System.out.println("There is no a chosen grade");
 
         }
 
@@ -67,7 +67,7 @@ public class Processing {
             //calculate a new rating
             rate = d + Calculation.countRate();
             rate = new BigDecimal(rate).setScale(2, RoundingMode.HALF_EVEN).doubleValue();
-
+            //send query of changing rate
             Query query = session.createQuery("update "+grade+" set rating = :rating where id = :number");
             query.setParameter("number",num);
             query.setParameter("rating", rate);

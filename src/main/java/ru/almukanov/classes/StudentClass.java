@@ -1,24 +1,7 @@
-package classes;
+package ru.almukanov.classes;
 
-import javax.persistence.*;
-import java.io.Serializable;
+public class StudentClass {
 
-@Entity
-@Table (name = "rating", schema="rating")
-public class StudentRate9g implements Serializable {
-    public StudentRate9g() {
-    }
-
-    public StudentRate9g(Long id, String firstName, String lastName, Double rating) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.rating = rating;
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
     private Long id;
 
     public Long getId() {
@@ -28,11 +11,11 @@ public class StudentRate9g implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-    @Column(name = "firstName")
+
     private String firstName;
-    @Column(name = "lastName")
+
     private String lastName;
-    @Column(name = "rating")
+
     private Double rating;
 
     public String getFirstName() {
@@ -61,6 +44,6 @@ public class StudentRate9g implements Serializable {
 
     @Override
     public String toString() {
-        return  ""+id + " " + firstName  + " " + lastName;
+        return  ""+id + " " + firstName  + " " + lastName + " "+rating;
     }
 }

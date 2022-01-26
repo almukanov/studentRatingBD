@@ -1,16 +1,12 @@
+package ru.almukanov;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import javax.persistence.Query;
-import javax.persistence.TransactionRequiredException;
-import javax.persistence.criteria.CriteriaDelete;
-import java.io.IOException;
-import java.lang.reflect.Constructor;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Processing {

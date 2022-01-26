@@ -1,15 +1,15 @@
-package classes;
+package ru.almukanov.classes;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table (name = "rating", schema="rating")
-public class StudentRate11a implements Serializable {
-    public StudentRate11a() {
+@Table (name = "studentRate9d", schema="rating")
+public class StudentRate9d extends StudentClass implements Serializable {
+    public StudentRate9d() {
     }
 
-    public StudentRate11a(Long id, String firstName, String lastName, Double rating) {
+    public StudentRate9d(Long id, String firstName, String lastName, Double rating) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -61,6 +61,6 @@ public class StudentRate11a implements Serializable {
 
     @Override
     public String toString() {
-        return  ""+id + " " + firstName  + " " + lastName;
+        return  ""+id + " " + firstName  + " " + lastName + " "+rating;
     }
 }

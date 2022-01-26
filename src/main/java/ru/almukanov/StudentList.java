@@ -1,3 +1,5 @@
+package ru.almukanov;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 

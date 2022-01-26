@@ -1,3 +1,5 @@
+package ru.almukanov;
+
 import java.util.Scanner;
 /*
 Rate calculation

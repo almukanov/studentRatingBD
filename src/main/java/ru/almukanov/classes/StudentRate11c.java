@@ -1,15 +1,15 @@
-package classes;
+package ru.almukanov.classes;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
 @Table (name = "rating", schema="rating")
-public class StudentRate11b implements Serializable {
-    public StudentRate11b() {
+public class StudentRate11c implements Serializable {
+    public StudentRate11c() {
     }
 
-    public StudentRate11b(Long id, String firstName, String lastName, Double rating) {
+    public StudentRate11c(Long id, String firstName, String lastName, Double rating) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

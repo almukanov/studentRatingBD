@@ -1,21 +1,20 @@
 package ru.almukanov.services;
 
-import ru.almukanov.classes.Rating;
 import ru.almukanov.classes.Students;
-import ru.almukanov.dao.StudentDao;
+import ru.almukanov.dao.StudentDaoImpl;
 
 import java.util.List;
 
 public class StudentService {
 
-    StudentDao studentDao = new StudentDao();
+    StudentDaoImpl studentDaoImpl = new StudentDaoImpl();
 
 
     public void updateStudent(Students student) {
-        studentDao.update(student);
+        studentDaoImpl.update(student);
     }
 
     public List<Students> findAllStudents() {
-        return studentDao.findAll();
+        return studentDaoImpl.findAll();
     }
 }

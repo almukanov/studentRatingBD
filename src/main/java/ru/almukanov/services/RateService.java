@@ -2,12 +2,10 @@ package ru.almukanov.services;
 
 import ru.almukanov.classes.Rating;
 import ru.almukanov.classes.Students;
-import ru.almukanov.dao.RateDao;
-
-import java.util.List;
+import ru.almukanov.dao.RateDaoImpl;
 
 public class RateService {
-    private RateDao rateDao = new RateDao();
+    private RateDaoImpl rateDaoImpl = new RateDaoImpl();
 
     public RateService() {
     }
@@ -15,15 +13,15 @@ public class RateService {
 
 
     public void saveRate(Rating rate) {
-        rateDao.save(rate);
+        rateDaoImpl.save(rate);
     }
 
     public void deleteRate(Rating rate) {
-        rateDao.delete(rate);
+        rateDaoImpl.delete(rate);
     }
 
     public void updateRate(Rating rate) {
-        rateDao.update(rate);
+        rateDaoImpl.update(rate);
     }
 
 
@@ -31,7 +29,7 @@ public class RateService {
 
 
     public Students findStudentById(int id) {
-        return rateDao.findStudentById(id);
+        return rateDaoImpl.findStudentById(id);
     }
 
 

@@ -3,6 +3,10 @@ package ru.almukanov;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import ru.almukanov.classes.Rating;
+import ru.almukanov.classes.Students;
+import ru.almukanov.services.RateService;
+import ru.almukanov.services.StudentService;
 
 import javax.persistence.Query;
 import java.math.BigDecimal;
@@ -31,12 +35,12 @@ public class Processing {
         scanner = new Scanner(System.in);
         switch(scanner.nextInt()){
             case 1: {
-                grade = "StudentRate9d";
+                grade = "9d";
 
                 break;
             }
             case 2: {
-                grade = "StudentRate9e";
+                grade = "9e";
 
                 break;
             }
@@ -46,32 +50,22 @@ public class Processing {
         }
 
 
+        StudentService studentService = new StudentService();
+        RateService rateService = new RateService();
 
 
-        //----------rate counting
-        SessionFactory sf = HibernateUtil.getSessionFactory();
-        Session session = sf.openSession();
-        Transaction txn = session.beginTransaction();
-        //get list of choosen grade
-        for(int i =0;i< StudentList.studentList(grade).size(); i++){
-            String[] id = StudentList.studentList(grade).get(i).toString().split(" ");
-            // get id of student
-            Long num = Long.parseLong(id[0]);
-            //get current rating of student
-            double d = Double.parseDouble(id[3]);
-            System.out.println(StudentList.studentList(grade).get(i));
-            //calculate a new rating
-            rate = d + Calculation.countRate();
-            rate = new BigDecimal(rate).setScale(2, RoundingMode.HALF_EVEN).doubleValue();
-            //send query of changing rate
-            Query query = session.createQuery("update "+grade+" set rating = :rating where id = :number");
-            query.setParameter("number",num);
-            query.setParameter("rating", rate);
-            query.executeUpdate();
-
+        for(Students st: studentService.findAllStudents(grade)){
+            System.out.println(st.getFirstName()+" "+st.getLastName());
+            double r = Calculation.countRate();
+            Rating rate = new Rating(st,r);
+            rateService.updateRate(rate);
         }
-        txn.commit();
-        session.close();
+
+
+
+
+
+
 
 
 

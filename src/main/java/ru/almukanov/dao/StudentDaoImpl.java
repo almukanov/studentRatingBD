@@ -26,10 +26,10 @@ public class StudentDaoImpl implements StudentDao{
         session.close();
 
     }
+//TODO right SQL query
+    public List<Students> findAll(String gr) {
 
-    public List<Students> findAll() {
-
-        return   HibernateUtil.getSessionFactory().openSession().createQuery("From Students").list();
+        return   HibernateUtil.getSessionFactory().openSession().createSQLQuery("SELECT  FROM  public.students st  JOIN public.grade  gr ON ( st.grade=gr.id )  WHERE  gr.grade_number  = "+"'"+gr+"'").list();
 
 
     }

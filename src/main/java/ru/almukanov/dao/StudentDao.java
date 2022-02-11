@@ -7,6 +7,6 @@ import java.util.List;
 public interface StudentDao {
     public void delete(Students student);
     public void update(Students student);
-    public List<Students> findAll();
+    public List<Students> findAll(String grade);
 
 }

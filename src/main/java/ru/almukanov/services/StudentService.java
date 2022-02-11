@@ -14,7 +14,7 @@ public class StudentService {
         studentDaoImpl.update(student);
     }
 
-    public List<Students> findAllStudents() {
-        return studentDaoImpl.findAll();
+    public List<Students> findAllStudents(String grade) {
+        return studentDaoImpl.findAll(grade);
     }
 }

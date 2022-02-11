@@ -1,4 +1,4 @@
-/*package ru.almukanov.classes;
+package ru.almukanov.classes;
 
 import org.hibernate.annotations.OptimisticLockType;
 import org.hibernate.annotations.OptimisticLocking;
@@ -58,4 +58,3 @@ public class Grade {
     }
 }
 
-*/

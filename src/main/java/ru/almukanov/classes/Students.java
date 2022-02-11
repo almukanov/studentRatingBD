@@ -23,6 +23,8 @@ public class Students {
     @Column(name = "id", nullable = false)
     private int id;
 
+
+
     public String getFirstName() {
         return firstName;
     }

@@ -4,6 +4,7 @@ import org.hibernate.annotations.OptimisticLockType;
 import org.hibernate.annotations.OptimisticLocking;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "students", schema="public")
@@ -23,7 +24,9 @@ public class Students {
     @Column(name = "id", nullable = false)
     private int id;
 
-
+@ManyToOne
+@JoinColumn(name = "grade")
+Grade grade;
 
     public String getFirstName() {
         return firstName;

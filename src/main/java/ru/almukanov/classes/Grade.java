@@ -34,18 +34,11 @@ public class Grade {
 
 
 
-    public List<Students> getStudents() {
-        return students;
-    }
 
-    public void setStudents(List<Students> students) {
-        this.students = students;
-    }
 
     @Column(name = "grade_number", nullable = false)
     private String gradeNumber;
-    @OneToMany(mappedBy = "grade",  orphanRemoval = true)
-    private List<Students> students;
+
 
 
 

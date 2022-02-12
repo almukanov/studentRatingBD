@@ -11,7 +11,7 @@
 <hibernate-configuration>
     <session-factory>
 
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5433/studentRate</property> <!-- BD Mane -->
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5433/postgres</property> <!-- BD Mane -->
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
         <property name="connection.username">postgres</property> <!-- DB User -->
         <property name="connection.password">root</property> <!-- DB Password -->

@@ -17,4 +17,7 @@ public class StudentService {
     public List<Students> findAllStudents(String grade) {
         return studentDaoImpl.findAll(grade);
     }
+    public Students findStudentById(int id) {
+        return studentDaoImpl.findStudentById(id);
+    }
 }

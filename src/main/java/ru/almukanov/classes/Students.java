@@ -10,23 +10,31 @@ import java.util.List;
 @Table(name = "students", schema="public")
 
 public class Students {
-    public Students() {
-    }
 
-    public Students(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-
-    }
-
+// fields
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private int id;
 
-@ManyToOne
-@JoinColumn(name = "grade")
-Grade grade;
+    @Column(name = "first_name", nullable = false)
+    private String firstName;
+
+    @Column(name = "last_name", nullable = false)
+    private String lastName;
+
+    @ManyToOne
+    @JoinColumn(name = "grade")
+    Grade grade;
+//-end--fields
+
+    public Students() {
+    }
+    public Students(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+
+    }
 
     public String getFirstName() {
         return firstName;
@@ -43,15 +51,6 @@ Grade grade;
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
-
-    @Column(name = "first_name", nullable = false)
-    private String firstName;
-
-    @Column(name = "last_name", nullable = false)
-    private String lastName;
-
-
 
     public int getId() {
         return id;

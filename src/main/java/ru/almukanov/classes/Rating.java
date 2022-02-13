@@ -10,26 +10,23 @@ import javax.persistence.*;
 @Table(name = "rating", schema="public")
 
 public class Rating {
+
+//fields
+    @Id
+    @Column(name = "student", nullable = false)
+    private int student;
+
+    @Column(name = "rating")
+    private double rating;
+//--end--fields
+
     public Rating() {
     }
 
     public Rating( Students student, double rating) {
         this.rating = rating;
-this.student = student.getId();
+        this.student = student.getId();
     }
-
-    @Id
-
-    @Column(name = "student", nullable = false)
-    private int student;
-
-
-    @Column(name = "rating")
-    private double rating;
-
-
-
-
 
     public double getRating() {
         return rating;
@@ -38,12 +35,5 @@ this.student = student.getId();
     public void setRating(double rating) {
         this.rating = rating;
     }
-
-
-
-
-
-
-
 
 }

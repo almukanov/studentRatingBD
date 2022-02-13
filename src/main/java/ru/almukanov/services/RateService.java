@@ -28,9 +28,7 @@ public class RateService {
 
 
 
-    public Students findStudentById(int id) {
-        return rateDaoImpl.findStudentById(id);
-    }
+
 
 
 }

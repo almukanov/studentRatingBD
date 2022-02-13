@@ -36,9 +36,6 @@ public class RateDaoImpl implements RateDao {
         session.close();
     }
 
-    public Students findStudentById(int id) {
-        return HibernateUtil.getSessionFactory().openSession().get(Students.class, id);
-    }
 
 
 

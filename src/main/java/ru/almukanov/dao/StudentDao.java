@@ -8,5 +8,5 @@ public interface StudentDao {
     public void delete(Students student);
     public void update(Students student);
     public List<Students> findAll(String grade);
-
+    public Students findStudentById(int id);
 }

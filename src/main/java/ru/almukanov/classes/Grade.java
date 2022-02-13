@@ -10,6 +10,16 @@ import java.util.List;
 @Table(name = "grade", schema="public")
 
 public class Grade {
+
+//fields
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private Long id;
+
+    @Column(name = "grade_number", nullable = false)
+    private String gradeNumber;
+//--end--fields
     public Grade() {
     }
 
@@ -18,11 +28,6 @@ public class Grade {
 
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Long id;
-
     public String getGradeNumber() {
         return gradeNumber;
     }
@@ -30,17 +35,6 @@ public class Grade {
     public void setGradeNumber(String gradeNumber) {
         this.gradeNumber = gradeNumber;
     }
-
-
-
-
-
-
-    @Column(name = "grade_number", nullable = false)
-    private String gradeNumber;
-
-
-
 
     public Long getId() {
         return id;

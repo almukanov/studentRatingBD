@@ -49,10 +49,14 @@ static String chosenGrade;
           chosenGrade  = grade.getGradeNumber();
         }
         //--end--choose a grade
-
+//TODO + rate
         for(Students st: studentService.findAllStudents(chosenGrade)){
             System.out.println(st.getFirstName()+" "+st.getLastName());
-            double r = Calculation.countRate();
+            System.out.println("Last rate: "+ rateService.select(st.getId()));
+            double r = Calculation.countRate() + rateService.select(st.getId());
+
+            System.out.println("New rate: "+r);
+
             Rating rate = new Rating(st,r);
             rateService.updateRate(rate);
         }

@@ -4,6 +4,8 @@ import ru.almukanov.classes.Rating;
 import ru.almukanov.classes.Students;
 import ru.almukanov.dao.RateDaoImpl;
 
+import java.util.List;
+
 public class RateService {
     private RateDaoImpl rateDaoImpl = new RateDaoImpl();
 
@@ -11,7 +13,9 @@ public class RateService {
     }
 
 
-
+public double select(int id){
+      return  rateDaoImpl.select(id);
+}
     public void saveRate(Rating rate) {
         rateDaoImpl.save(rate);
     }

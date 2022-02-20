@@ -21,13 +21,14 @@ public class RateDaoImpl implements RateDao {
     }
 
     public void save(Rating rate) {
-
+        LocalDateTime dt1 = LocalDateTime.now();
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
         session.save(rate);
         tx1.commit();
         session.close();
-        logger.info("TEST");
+        LocalDateTime dt2 = LocalDateTime.now();
+        logger.info("TEST2 {} {}",dt1, dt2);
     }
 
     public void update(Rating rate) {

@@ -16,7 +16,7 @@ import java.sql.SQLException;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
-        PropertyConfigurator.configure("C:\\java\\studentRatingBD\\src\\main\\resources\\log4j.properties");
+        PropertyConfigurator.configure("src/main/resources/log4j.properties");
 
 
       Processing.process();

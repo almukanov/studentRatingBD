@@ -1,6 +1,7 @@
 package ru.almukanov;
 
 import java.text.DecimalFormat;
+import java.util.Locale;
 import java.util.Scanner;
 /*
 Rate calculation
@@ -14,11 +15,14 @@ public class Calculation {
     static Scanner scanner = new Scanner(System.in);
     //rate counting
     public static double countRate(){
+
         answerActivity = scanner.nextInt();
         selfActivity = scanner.nextInt();
         questionfActivity = scanner.nextInt();
+
         rate = (double)(answerActivity+selfActivity*2+questionfActivity*2)/3;
-        rate = Double.parseDouble(new DecimalFormat(DIGIT_PATTERN).format(rate));
+
+        rate = Double.parseDouble(new DecimalFormat(DIGIT_PATTERN).format(rate).replace(",","."));
         return rate;
     }
 }

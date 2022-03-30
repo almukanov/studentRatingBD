@@ -1,10 +1,6 @@
 package ru.almukanov.classes;
 
-import org.hibernate.annotations.OptimisticLockType;
-import org.hibernate.annotations.OptimisticLocking;
-
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "students", schema="public")
@@ -25,7 +21,16 @@ public class Students {
 
     @ManyToOne
     @JoinColumn(name = "grade")
-    Grade grade;
+    private Grade grade;
+
+    public Grade getGrade() {
+        return grade;
+    }
+
+    public void setGrade(Grade grade) {
+        this.grade = grade;
+    }
+
 //-end--fields
 
     public Students() {

@@ -1,8 +1,5 @@
 package ru.almukanov;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import ru.almukanov.classes.Grade;
 import ru.almukanov.classes.Rating;
 import ru.almukanov.classes.Students;
@@ -10,10 +7,6 @@ import ru.almukanov.services.GradeService;
 import ru.almukanov.services.RateService;
 import ru.almukanov.services.StudentService;
 
-import javax.persistence.Query;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Processing {

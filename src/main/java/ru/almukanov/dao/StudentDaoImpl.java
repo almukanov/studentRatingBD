@@ -2,10 +2,11 @@ package ru.almukanov.dao;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.springframework.stereotype.Component;
 import ru.almukanov.classes.Students;
 
 import java.util.List;
-
+@Component
 public class StudentDaoImpl implements StudentDao{
 
     public void delete(Students student)  {

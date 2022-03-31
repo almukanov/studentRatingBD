@@ -16,7 +16,7 @@ import ru.almukanov.services.StudentService;
 import java.util.Scanner;
 @Component
 public class Processing {
-    ApplicationContext context
+    ClassPathXmlApplicationContext context
             = new ClassPathXmlApplicationContext("applicationContext.xml");
     static double rate;
     static   Scanner scanner;

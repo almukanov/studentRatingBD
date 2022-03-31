@@ -4,10 +4,11 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import ru.almukanov.classes.Rating;
 
 import java.time.LocalDateTime;
-
+@Component
 public class RateDaoImpl implements RateDao {
     Logger logger = LoggerFactory.getLogger(RateDaoImpl.class);
 

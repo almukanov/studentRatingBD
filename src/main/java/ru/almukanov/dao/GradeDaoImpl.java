@@ -1,9 +1,10 @@
 package ru.almukanov.dao;
 
+import org.springframework.stereotype.Component;
 import ru.almukanov.classes.Grade;
 
 import java.util.List;
-
+@Component
 public class GradeDaoImpl implements GradeDao{
 
     @Override

@@ -2,6 +2,7 @@ package ru.almukanov.classes;
 
 import org.hibernate.annotations.OptimisticLockType;
 import org.hibernate.annotations.OptimisticLocking;
+import org.springframework.stereotype.Component;
 import ru.almukanov.services.StudentService;
 
 import javax.persistence.*;
@@ -9,7 +10,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "rating", schema="public")
-
+@Component
 public class Rating implements Serializable {
     //fields
     @Id

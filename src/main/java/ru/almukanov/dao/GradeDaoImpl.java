@@ -6,7 +6,6 @@ import java.util.List;
 
 public class GradeDaoImpl implements GradeDao{
 
-
     @Override
     public List<Grade> select() {
             return HibernateUtil.getSessionFactory().openSession().createQuery("FROM Grade").list();

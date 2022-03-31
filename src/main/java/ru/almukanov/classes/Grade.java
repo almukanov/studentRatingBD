@@ -2,13 +2,14 @@ package ru.almukanov.classes;
 
 import org.hibernate.annotations.OptimisticLockType;
 import org.hibernate.annotations.OptimisticLocking;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "grade", schema="public")
-
+@Component
 public class Grade {
 
 //fields

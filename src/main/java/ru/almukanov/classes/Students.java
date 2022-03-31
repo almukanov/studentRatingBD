@@ -1,10 +1,12 @@
 package ru.almukanov.classes;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "students", schema="public")
-
+@Component
 public class Students {
 
 // fields

@@ -8,6 +8,7 @@ import ru.almukanov.classes.Students;
 import java.util.List;
 
 public class StudentDaoImplTest {
+    /*
     @Test
     public void testNumberOfGrades() {
         List<Integer> l = GradeDao.HibernateUtil.getSessionFactory().openSession().createQuery("FROM Grade").list();
@@ -30,5 +31,7 @@ try {
 }
 
     }
+
+     */
 
 }
